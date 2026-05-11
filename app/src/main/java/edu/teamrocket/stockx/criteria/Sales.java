@@ -8,9 +8,7 @@ import edu.teamrocket.stockx.offer.*;
 
 public class Sales implements Criteria {
 
-    public Sales(Item item) {
-        checkCriteria(item);
-    }
+    public Sales() {}
 
     @Override
     public List<Offer> checkCriteria(Item item) {

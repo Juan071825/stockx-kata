@@ -8,9 +8,7 @@ import edu.teamrocket.stockx.offer.Bid;
 
 public class Bids implements Criteria {
     
-    public Bids(Item item) {
-        checkCriteria(item);
-    }
+    public Bids() {}
 
     @Override
     public List<Offer> checkCriteria(Item item) {
