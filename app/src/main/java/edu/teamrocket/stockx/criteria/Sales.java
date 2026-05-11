@@ -6,16 +6,16 @@ import java.util.stream.Collectors;
 import edu.teamrocket.stockx.item.Item;
 import edu.teamrocket.stockx.offer.Offer;
 
-class Bids implements Criteria {
+class Sales implements Criteria {
 
-    Bids(Item item) {
+    Sales(Item item) {
         checkCriteria(item);
     }
 
     @Override
     public List<Offer> checkCriteria(Item item) {
-        List<Offer> bidsList = item.offers().stream()
-                                    .filter(a -> a instanceof Bid)
+        List<Offer> salesList = item.offers().stream()
+                                    .filter(a -> a instanceof Sale)
                                     .collect(Collectors.toList());
     }
 }
