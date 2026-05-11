@@ -6,11 +6,9 @@ import edu.teamrocket.stockx.item.Item;
 import edu.teamrocket.stockx.offer.Offer;
 import edu.teamrocket.stockx.offer.Ask;
 
-class Asks implements Criteria {
+public class Asks implements Criteria {
 
-    Asks(Item item) {
-        checkCriteria(item);
-    }
+    public Asks() {}
 
     @Override
     public List<Offer> checkCriteria(Item item) {
