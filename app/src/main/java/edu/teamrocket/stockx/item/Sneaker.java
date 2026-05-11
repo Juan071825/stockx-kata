@@ -10,7 +10,7 @@ public class Sneaker implements Item {
     private List<Offer> listaOfertas;
 
 
-    Sneaker(String style, String name){
+    public Sneaker(String style, String name){
         this.style = style;
         this.name = name;
     }
