@@ -1,3 +1,4 @@
+package edu.teamrocket.stockx;
 /**
  * StockX nació en Detroit, y allí siguen haciendo
  * las cosas a la manera tradicional, 
