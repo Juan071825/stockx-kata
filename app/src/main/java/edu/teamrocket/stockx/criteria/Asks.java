@@ -1,10 +1,10 @@
 package edu.teamrocket.stockx.criteria;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 import edu.teamrocket.stockx.item.Item;
 import edu.teamrocket.stockx.offer.Offer;
+import edu.teamrocket.stockx.offer.Ask;
 
 class Asks implements Criteria {
 
@@ -17,5 +17,6 @@ class Asks implements Criteria {
         List<Offer> asksList = item.offers().stream()
                                     .filter(a -> a instanceof Ask)
                                     .collect(Collectors.toList());
+        return asksList;
     }
 }

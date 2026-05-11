@@ -1,6 +1,6 @@
 package edu.teamrocket.stockx.offer;
 
-class Ask implements Offer {
+public class Ask implements Offer {
     private final String size;
     private final int ask;
 
