@@ -6,9 +6,9 @@ import edu.teamrocket.stockx.item.Item;
 import edu.teamrocket.stockx.offer.Offer;
 import edu.teamrocket.stockx.offer.*;
 
-class Sales implements Criteria {
+public class Sales implements Criteria {
 
-    Sales(Item item) {
+    public Sales(Item item) {
         checkCriteria(item);
     }
 

@@ -4,7 +4,7 @@ public class Ask implements Offer {
     private final String size;
     private final int ask;
 
-    Ask(String size, int ask) {
+    public Ask(String size, int ask) {
         this.size = size;
         this.ask = ask;
     }
