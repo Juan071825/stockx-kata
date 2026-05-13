@@ -6,12 +6,12 @@ import java.util.Optional;
 import edu.teamrocket.stockx.item.Item;
 import edu.teamrocket.stockx.offer.*;
 
-public class Min implements Criteria {
+public class Max implements Criteria {
 
     private Criteria criteria;
     private Criteria otherCriteria;
 
-    public Min (Criteria criteria, Criteria otherCriteria) {
+    public Max (Criteria criteria, Criteria otherCriteria) {
         this.criteria = criteria;
         this.otherCriteria = otherCriteria;
     }
@@ -20,9 +20,9 @@ public class Min implements Criteria {
     public List<Offer> checkCriteria(Item item) {
         List<Offer> offers = new AndCriteria(criteria, otherCriteria).checkCriteria(item);
 
-        Optional<Offer> askMinSize = offers.stream()
-                                        .min(Offer::compareTo);
+        Optional<Offer> askMaxSize = offers.stream()
+                                        .max(Offer::compareTo);
         
-        return askMinSize.isPresent() ? List.of(askMinSize.get()) : List.of();
+        return askMaxSize.isPresent() ? List.of(askMaxSize.get()) : List.of();
     }
 }

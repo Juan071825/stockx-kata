@@ -1,7 +1,6 @@
 package edu.teamrocket.stockx.criteria;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import edu.teamrocket.stockx.item.Item;
 import edu.teamrocket.stockx.offer.Offer;
