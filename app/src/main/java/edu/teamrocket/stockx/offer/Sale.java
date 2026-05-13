@@ -2,7 +2,7 @@ package edu.teamrocket.stockx.offer;
 
 public class Sale implements Offer {
     private final String size;
-    private final int sale;
+    private final Integer sale;
 
     public Sale(String size, int sale) {
         this.size = size;
@@ -21,7 +21,7 @@ public class Sale implements Offer {
 
     @Override
     public int compareTo(Offer offer) {
-        return this.value() - offer.value();
+        return this.sale.compareTo(offer.value());
     }
 
     @Override
