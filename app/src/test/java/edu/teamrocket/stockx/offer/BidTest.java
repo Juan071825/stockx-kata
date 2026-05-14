@@ -10,14 +10,15 @@ public class BidTest {
     Bid oferta3 = new Bid("10", 13);
 
     @Test
-    public void comprobarDatos() {
+    public void testComprobarDatos() {
         assertEquals(50, oferta1.value());
         assertEquals("15", oferta1.size());
     }
 
-    @Test void compararOfertas() {
+    @Test 
+    public void compararOfertas() {
         assertEquals(oferta1.compareTo(oferta2), 0);
-        assertEquals(oferta1.compareTo(oferta3), 37);
-        assertEquals(oferta3.compareTo(oferta1), -37);
+        assertEquals(oferta1.compareTo(oferta3), 1);
+        assertEquals(oferta3.compareTo(oferta1), -1);
     }
 }

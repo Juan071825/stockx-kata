@@ -63,6 +63,7 @@ public class Sneaker implements Item {
         this.sale = sale;
     }
 
+    @Override
     public String toString(){
         StringBuilder sneaker = new StringBuilder();
         sneaker.append("getName()/n");

@@ -1,7 +1,8 @@
 package edu.teamrocket.stockx.offer;
 
-public interface Offer {
+public interface Offer extends Comparable<Offer> {
     String size();
     int value();
+    @Override
     int compareTo(Offer offer);
 }

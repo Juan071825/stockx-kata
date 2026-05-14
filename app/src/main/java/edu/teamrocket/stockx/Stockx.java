@@ -3,7 +3,7 @@ import edu.teamrocket.stockx.criteria.*;
 import edu.teamrocket.stockx.item.*;
 import edu.teamrocket.stockx.offer.*;
 import java.util.List;
-/**
+/*
  * StockX nació en Detroit, y allí siguen haciendo
  * las cosas a la manera tradicional, 
  * robustas y con alma, en ASCII en la CLI.
@@ -25,7 +25,7 @@ public class Stockx {
 
     public static void main(String[] args) {
 
-        /**
+        /*
          * Crear la zapatilla 
          * y printar sus datos.
          * 
@@ -37,7 +37,7 @@ public class Stockx {
         Item sneaker = new Sneaker("555088-105", "Jordan 1 Retro High Dark Mocha");
         System.out.println(Stockx.draw(sneaker));
 
-        /**
+        /*
          * Crear bids
          * y añadirlas a la zapatilla
          * en sus offers.
@@ -50,7 +50,7 @@ public class Stockx {
         sneaker.add(new Bid("13", 338));
         sneaker.add(new Bid("9.5", 480));
 
-        /**
+        /*
          * Crear asks
          * y añadirlas a la zapatilla
          * en sus offers.
@@ -63,7 +63,7 @@ public class Stockx {
         sneaker.add(new Ask("9.5", 340));
         sneaker.add(new Ask("13", 330));
 
-        /**
+        /*
          * Crear el filtro "Bids" que filtra
          * solo las bids de entre las 
          * offers de la zapatilla. 
@@ -73,7 +73,7 @@ public class Stockx {
         System.out.println("\n\t\t All BIDS");
         bids.checkCriteria(sneaker).forEach(System.out::print);
 
-        /**
+        /*
          * Crea el filtro "Asks" que filtra
          * solo las asks de entre las
          * offers de la zapatilla. 
@@ -83,7 +83,7 @@ public class Stockx {
         System.out.println("\n\t\t All ASKS");
         asks.checkCriteria(sneaker).forEach(System.out::print);
 
-        /**
+        /*
          * Muestra la bid maxima
          * de la zapatilla. 
          * 
@@ -101,7 +101,7 @@ public class Stockx {
         sneaker.setBid(maximum.isEmpty()? 0 : maximum.get(0).value());
         System.out.println(Stockx.draw(sneaker));
 
-        /**
+        /*
          * Muestra la ask minima
          * de la zapatilla. 
          * 
@@ -119,7 +119,7 @@ public class Stockx {
         sneaker.setAsk(minimum.isEmpty()? 0 : minimum.get(0).value());
         System.out.println(Stockx.draw(sneaker));
 
-        /**
+        /*
          * Añade ventas (sales) de 
          * una zapatilla a sus offers.
          * Las ventas se añaden segun fecha
@@ -134,7 +134,7 @@ public class Stockx {
         sneaker.add(new Sale("13", 360));
         sneaker.add(new Sale("13", 372));
 
-        /**
+        /*
          * Crear el filtro "Sales" que filtra
          * solo las ventas /sales de entre las 
          * offers de la zapatilla.
@@ -144,7 +144,7 @@ public class Stockx {
         System.out.println("\n\t\t All SALES");
         sales.checkCriteria(sneaker).forEach(System.out::print);
         
-        /**
+        /*
          * Crea un filtro que devuelva
          * la ULTIMA de las ventas (que 
          * es la ultima en ser incluida
@@ -157,12 +157,12 @@ public class Stockx {
         sneaker.setSale(actualSale.isEmpty()? 0 : actualSale.get(0).value());
         System.out.println(Stockx.draw(sneaker));
 
-        /**
+        /*
          * Mostrar info de la zapatilla 
          * en la talla 9.5
          */
 
-        /**
+        /*
          * Muestra las sales de la talla 9.5
          * 
          * Crea un filtro Size(talla) que devuelva las
@@ -185,7 +185,7 @@ public class Stockx {
                             sizeSales.get(sizeSales.size() -1).value());
         System.out.println("\n\t\t LAST SALE 9.5 US: " + sneaker.getSale());
 
-        /**
+        /*
          * Reutiliza el filtro AndCriteria 
          * para filtrar las bids de la talla 9.5
          */   
@@ -195,7 +195,7 @@ public class Stockx {
         Criteria andSizeBids = new AndCriteria(size, bids);
         andSizeBids.checkCriteria(sneaker).forEach(System.out::print);
 
-        /**
+        /*
          * Crea un filtro Max(size, bids)
          * que devuelva el maximo de las bids
          * de una talla.
@@ -206,7 +206,7 @@ public class Stockx {
         sneaker.setBid(sizeBid.isEmpty()? 0 : sizeBid.get(0).value());
         System.out.println("\n\t\t MAX BID 9.5 US: " + sneaker.getBid());
 
-        /**
+        /*
          * Crea un filtro Min(size, asks)
          * que devuelva el minimo de las asks
          * de una talla.
@@ -217,7 +217,7 @@ public class Stockx {
         sneaker.setAsk(sizeAsk.isEmpty()? 0 : sizeAsk.get(0).value());
         System.out.println("\n\t\t MIN ASK 9.5 US: " + sneaker.getAsk());
 
-        /**
+        /*
          * Mostrar info de la zapatilla 
          * en la talla 9.5
          * - ultima venta
