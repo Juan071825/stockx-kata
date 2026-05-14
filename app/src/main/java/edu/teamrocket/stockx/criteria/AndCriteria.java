@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import edu.teamrocket.stockx.item.Item;
-import edu.teamrocket.stockx.offer.Ask;
 import edu.teamrocket.stockx.offer.Offer;
 
 public class AndCriteria implements Criteria {
