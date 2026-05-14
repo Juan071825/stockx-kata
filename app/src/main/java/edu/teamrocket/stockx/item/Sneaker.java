@@ -1,5 +1,6 @@
 package edu.teamrocket.stockx.item;
 
+import java.util.ArrayList;
 import java.util.List;
 import edu.teamrocket.stockx.offer.Offer;
 
@@ -7,7 +8,7 @@ public class Sneaker implements Item {
 
     private String style, name;
     private int sale, ask, bid;
-    private List<Offer> listaOfertas;
+    private List<Offer> listaOfertas = new ArrayList<Offer>();
 
 
     public Sneaker(String style, String name){
@@ -40,7 +41,7 @@ public class Sneaker implements Item {
 
     @Override
     public void add(Offer offer){
-        listaOfertas.add(offer);
+        this.listaOfertas.add(offer);
     }
 
     @Override
@@ -66,8 +67,8 @@ public class Sneaker implements Item {
     @Override
     public String toString(){
         StringBuilder sneaker = new StringBuilder();
-        sneaker.append("getName()/n");
-        sneaker.append("getStyle()/n");
+        sneaker.append(getName());
+        sneaker.append(" " + getStyle());
         return sneaker.toString();
     }
 

@@ -18,7 +18,7 @@ public class LastSale implements Criteria {
                                     .filter(a -> a instanceof Sale)
                                     .collect(Collectors.toList());
 
-        List<Offer> lastSale = Arrays.asList(salesList.get(-1));
+        List<Offer> lastSale = Arrays.asList(salesList.get(salesList.size() - 1));
 
         return lastSale;
     }
